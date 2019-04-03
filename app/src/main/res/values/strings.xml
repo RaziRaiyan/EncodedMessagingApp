@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">ITC Project</string>
+    <string name="tv_email">Email</string>
+    <string name="email_hint">Enter valid email address</string>
+    <string name="tv_password">Password</string>
+    <string name="hint_password">Enter password</string>
+    <string name="button_login">Login</string>
+    <string name="button_sign_up"><u>Sign up</u></string>
+    <string name="tv_dont_have_account">Dont Have Account ?</string>
+    <string name="tv_name">Name</string>
+    <string name="name_sign_up">Enter Full Name</string>
+    <string name="email_sinup">Enter A Valid Email</string>
+    <string name="tv_confirm_password">Confirm Password</string>
+    <string name="tv_welcome">Welcome Back</string>
+    <string name="tv_login">Login Page</string>
+    <string name="menu_sign_out">Sign Out</string>
+    <string name="signup_header">Sign Up</string>
+    <string name="signup_subheader">fill the following information</string>
+    <string name="google_client_id">352927681471-7nmuh37opaoprkrnks8fr4663rfvih04.apps.googleusercontent.com</string>
+
+    <string name="email">example@mail.com</string>
+    <string name="inbox">Inbox</string>
+    <string name="starred">Starred Mails</string>
+    <string name="sent">Sent Mails</string>
+    <string name="subheader">Sub header</string>
+    <string name="spam">Spams </string>
+    <string name="trash">Trash</string>
+    <string name="all_mail">All Mails</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="my_name">Your Name</string>
+    <string name="buttonSkip">Skip</string>
+    <string name="buttonUpload">Upload</string>
+    <string name="button_load_gallery">Gallery</string>
+    <string name="button_load_camera">Camera</string>
+    <string name="text_upload_image">Upload Your Display Picture</string>
+    <string name="user_name">User Name</string>
+    <string name="dummy_date">24/05/19</string>
+    <string name="text_hint">Write your text message</string>
+</resources>

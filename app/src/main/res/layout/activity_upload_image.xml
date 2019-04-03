@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".UploadImageActivity">
+
+
+    <Button
+        android:id="@+id/buttonSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        style="@style/CustomButtonTransparent"
+        android:text="@string/buttonSkip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonUpload"
+        style="@style/CustomButtonGradient2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/buttonUpload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_upload"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_upload_uri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_upload_header"
+        app:srcCompat="@drawable/upload_placeholder" />
+
+    <TextView
+        android:id="@+id/tv_upload_uri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_gallery"
+        style="@style/CustomButtonGradient2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="128dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUpload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_gallery_white_56dp" />
+
+    <ImageButton
+        android:id="@+id/btn_capture"
+        style="@style/CustomButtonGradient2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_gallery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_camera_white_24dp" />
+
+    <TextView
+        android:id="@+id/tv_upload_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/text_upload_image"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/upload_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUpload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/buttonUpload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_upload_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="Uploading Image.."
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="343dp" />
+
+            <ProgressBar
+                android:id="@+id/upload_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@drawable/progress_back"
+                android:padding="8dp"
+                android:progress="40"
+                android:progressTint="@color/colorAccent"
+                tools:layout_editor_absoluteX="299dp"
+                tools:layout_editor_absoluteY="571dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_upload_bytes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="40/100 MB"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tv_upload_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="40%"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_play_pause"
+            style="@style/CustomButtonTransparent"
+            android:layout_width="27dp"
+            android:layout_height="33dp"
+            android:layout_margin="8dp"
+            android:paddingTop="22dp"
+            android:paddingRight="16dp"
+            app:srcCompat="@drawable/ic_pause_circle_outline_white_24dp"
+            tools:layout_editor_absoluteX="282dp"
+            tools:layout_editor_absoluteY="586dp" />
+
+        <ImageButton
+            android:id="@+id/btn_cancel_upload"
+            style="@style/CustomButtonTransparent"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_margin="8dp"
+            android:paddingTop="22dp"
+            app:srcCompat="@drawable/ic_cancel_white_24dp"
+            tools:layout_editor_absoluteX="325dp"
+            tools:layout_editor_absoluteY="586dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
